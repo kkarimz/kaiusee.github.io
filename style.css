@@ -1,4 +1,4 @@
-/* iOS 26 Neo-Glass Theme */
+/* Clean OLED iOS-Style Theme */
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
 body {
@@ -7,12 +7,8 @@ body {
     justify-content: center;
     min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-    /* Moody, high-end abstract background */
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://images.unsplash.com/photo-1635776062127-d379bfcbb9f8?q=80&w=2532&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    /* Pure Black Background */
+    background-color: #000000;
     color: white;
 }
 
@@ -24,10 +20,11 @@ body {
 }
 
 h1 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    margin-bottom: 40px;
-    letter-spacing: -0.022em; /* Apple's specific tracking */
+    margin-bottom: 45px;
+    letter-spacing: -0.022em;
+    color: #ffffff;
 }
 
 .button-container {
@@ -40,37 +37,35 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* iOS 26 Blur Spec */
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    /* Clean Glass on Black */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     
-    /* Ultra-thin "Retina" border */
-    border: 0.5px solid rgba(255, 255, 255, 0.15);
-    
-    /* Apple "Squircle" corner radius */
-    border-radius: 22px;
+    /* Subtle Blue Border */
+    border: 0.5px solid rgba(0, 112, 243, 0.4);
+    border-radius: 20px; /* iOS Squircle */
     
     color: #ffffff;
     padding: 20px;
     font-size: 1.05rem;
     font-weight: 500;
     text-decoration: none;
-    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* iOS-style Press Feedback */
+/* Smooth Hover/Press */
 .site-button:active {
-    background: rgba(255, 255, 255, 0.15);
-    transform: scale(0.95); /* Deeper press for haptic feel */
-    border-color: rgba(0, 112, 243, 0.5);
+    background: rgba(0, 112, 243, 0.2);
+    transform: scale(0.96);
+    border-color: #0070f3;
 }
 
 @media (hover: hover) {
     .site-button:hover {
-        background: rgba(255, 255, 255, 0.12);
-        border-color: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
     }
 }
 
-.tbd { opacity: 0.3; filter: blur(2px); pointer-events: none; }
+.tbd { opacity: 0.2; pointer-events: none; border: 0.5px dashed rgba(255,255,255,0.2); }
