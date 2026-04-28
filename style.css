@@ -1,4 +1,4 @@
-/* Glassmorphism Premium Theme */
+/* Clean Blue Glassmorphism (No Glow) */
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
 body {
@@ -7,9 +7,8 @@ body {
     justify-content: center;
     min-height: 100vh;
     font-family: -apple-system, system-ui, sans-serif;
-    /* This adds a dark, moody background image */
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop');
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+                url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2670&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -26,25 +25,27 @@ body {
 h1 {
     font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 40px;
-    letter-spacing: -0.5px;
+    margin-bottom: 45px;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    /* Removed text-shadow */
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .site-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* The "Glass" effect */
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    /* Clean solid border */
+    border: 1px solid rgba(0, 112, 243, 0.4);
     border-radius: 12px;
     
     color: white;
@@ -52,19 +53,21 @@ h1 {
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    /* Removed box-shadow */
 }
 
 .site-button:active {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 112, 243, 0.4);
+    border-color: #0070f3;
     transform: scale(0.97);
 }
 
 @media (hover: hover) {
     .site-button:hover {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
     }
 }
 
-.tbd { opacity: 0.3; pointer-events: none; }
+.tbd { opacity: 0.2; pointer-events: none; border: 1px dashed rgba(255,255,255,0.2); }
