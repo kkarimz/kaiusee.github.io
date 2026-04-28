@@ -1,4 +1,4 @@
-/* Restored Premium Blue Theme */
+/* Simple Dark Glass Theme */
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
 body {
@@ -8,9 +8,9 @@ body {
     min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
     
-    /* That First Wallpaper (Dark Blue Abstract) */
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
-                url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2670&auto=format&fit=crop');
+    /* Your requested Night Sky wallpaper */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=2670&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -25,33 +25,52 @@ body {
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: 800;
     margin-bottom: 45px;
-    letter-spacing: -0.022em;
+    letter-spacing: 2px;
     color: #ffffff;
+    /* Caps the page title as requested */
+    text-transform: uppercase;
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .site-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(20px) saturate(160%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    /* Stronger glass effect for easier reading */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     
-    border: 0.5px solid rgba(255, 255, 255, 0.15);
-    border-radius: 20px; /* iOS Squircle */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     
     color: #ffffff;
-    padding: 20px;
-    font-size: 1.05rem;
-    font-weight: 500;
+    padding: 22px;
+    /* Bigger font as requested */
+    font-size: 1.2rem;
+    font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0,
+    transition: all 0.2s ease;
+}
+
+.site-button:active {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(0.97);
+}
+
+@media (hover: hover) {
+    .site-button:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+.tbd { opacity: 0.3; pointer-events: none; }
