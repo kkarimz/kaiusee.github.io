@@ -1,14 +1,16 @@
-/* Cyber-Slate Theme */
+/* Cyber-Neon Purple Theme */
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
 body {
-    background-color: #0a0a0a; /* Deep charcoal */
+    background-color: #000000;
     color: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+    font-family: 'Inter', -apple-system, sans-serif;
     margin: 0;
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    /* Very subtle radial glow in the background */
+    background-image: radial-gradient(circle at 50% -20%, #220033 0%, #000000 80%);
 }
 
 .container {
@@ -19,53 +21,51 @@ body {
 }
 
 h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 2.2rem;
+    font-weight: 800;
     margin-bottom: 50px;
-    text-transform: uppercase;
-    color: #ffffff;
+    letter-spacing: -1px;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(191, 0, 255, 0.6);
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
 }
 
 .site-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.03); /* Subtle glass effect */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    color: #e0e0e0;
-    padding: 20px;
-    font-size: 1rem;
-    font-weight: 500;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(191, 0, 255, 0.3);
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 22px;
+    font-size: 1.1rem;
+    font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Accent color on hover/tap (Electric Blue) */
 .site-button:active {
-    background: rgba(0, 112, 243, 0.2);
-    border-color: #0070f3;
-    color: #0070f3;
-    transform: translateY(2px);
+    background: rgba(191, 0, 255, 0.2);
+    border-color: #bf00ff;
+    transform: scale(0.94);
+    box-shadow: 0 0 30px rgba(191, 0, 255, 0.4);
 }
 
 @media (hover: hover) {
     .site-button:hover {
-        background: rgba(255, 255, 255, 0.07);
-        border-color: rgba(255, 255, 255, 0.3);
-        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: #bf00ff;
+        box-shadow: 0 0 15px rgba(191, 0, 255, 0.2);
+        transform: translateY(-3px);
     }
 }
 
-.tbd {
-    opacity: 0.2;
-    filter: grayscale(1);
-    pointer-events: none;
-}
+.tbd { opacity: 0.2; pointer-events: none; border-style: dotted; }
