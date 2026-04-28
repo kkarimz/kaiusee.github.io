@@ -1,4 +1,4 @@
-/* Clean OLED iOS-Style Theme */
+/* Restored Premium Blue Theme */
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
 body {
@@ -7,8 +7,13 @@ body {
     justify-content: center;
     min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
-    /* Pure Black Background */
-    background-color: #000000;
+    
+    /* That First Wallpaper (Dark Blue Abstract) */
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2670&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
 }
 
@@ -20,7 +25,7 @@ body {
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 45px;
     letter-spacing: -0.022em;
@@ -37,13 +42,11 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Clean Glass on Black */
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
     
-    /* Subtle Blue Border */
-    border: 0.5px solid rgba(0, 112, 243, 0.4);
+    border: 0.5px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px; /* iOS Squircle */
     
     color: #ffffff;
@@ -51,21 +54,4 @@ h1 {
     font-size: 1.05rem;
     font-weight: 500;
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Smooth Hover/Press */
-.site-button:active {
-    background: rgba(0, 112, 243, 0.2);
-    transform: scale(0.96);
-    border-color: #0070f3;
-}
-
-@media (hover: hover) {
-    .site-button:hover {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: rgba(255, 255, 255, 0.5);
-    }
-}
-
-.tbd { opacity: 0.2; pointer-events: none; border: 0.5px dashed rgba(255,255,255,0.2); }
+    transition: all 0.3s cubic-bezier(0.4, 0,
