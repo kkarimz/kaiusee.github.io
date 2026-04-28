@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <title>Kais Stuff</title>
+    <style>
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        
+        body {
+            background-color: #000000;
+            color: #FFA500;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 60px 25px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 45px;
+            text-transform: lowercase;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .site-button {
+            display: block;
+            background: #111;
+            border: 1px solid #332100;
+            border-radius: 14px;
+            color: #FFA500;
+            padding: 18px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .site-button:active {
+            background: #FFA500;
+            color: #000;
+            transform: scale(0.97);
+        }
+
+        .tbd { opacity: 0.3; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>kais stuff</h1>
+        <div id="link-list" class="button-container"></div>
+    </div>
+
+    <script>
+        /**
+         * EDIT YOUR LINKS HERE
+         */
+        const LINKS = {
+            "Weather Dashboard": "dashboard/index.html",
+            "Quran Collection 1": "https://soundcloud.com/user-770372009/sets/quran/s-zgvBuYYwQOt",
+            "Quran Collection 2": "https://soundcloud.com/s-a-550587357/ot51jzawhoks",
+            "Personal Files": "#",
+            "Notes": "#"
+        };
+
+        // RENDER LOGIC
+        const listContainer = document.getElementById('link-list');
+        
+        Object.entries(LINKS).forEach(([name, url]) => {
+            const link = document.createElement('a');
+            link.href = url;
+            link.className = 'site-button';
+            if (url === "#") link.className += ' tbd';
+            link.textContent = name;
+            listContainer.appendChild(link);
+        });
+    </script>
+</body>
+</html>
