@@ -1,21 +1,23 @@
-/* Simple Dark Glass Theme */
+/* Calm Night Forest Theme */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap');
+
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
 body {
     margin: 0;
     display: flex;
     justify-content: center;
-    /* Forces the page to be at least the full height of the phone screen */
-    min-height: 100vh; 
-    /* Ensures no white space shows when scrolling */
-    background-color: #000000; 
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    min-height: 100vh;
+    /* Calm, clean modern font */
+    font-family: 'Montserrat', sans-serif;
     
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=2670&auto=format&fit=crop');
+    /* New Starry Night Forest Wallpaper */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1436891620584-47fd0e565afb?q=80&w=2574&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
-    /* "fixed" can cause issues on some mobile browsers, "scroll" with 100vh is safer */
     background-attachment: fixed;
+    background-color: #000;
     color: white;
 }
 
@@ -27,52 +29,53 @@ body {
 }
 
 h1 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 45px;
-    letter-spacing: 2px;
-    color: #ffffff;
-    /* Caps the page title as requested */
+    /* Bigger, bolder title with extra spacing */
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 55px;
     text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #ffffff;
+    opacity: 0.95;
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 15px;
 }
 
 .site-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Stronger glass effect for easier reading */
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
     
     color: #ffffff;
     padding: 22px;
-    /* Bigger font as requested */
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.15rem;
+    font-weight: 300; /* Light weight for a "calm" feel */
+    letter-spacing: 1px;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .site-button:active {
     background: rgba(255, 255, 255, 0.2);
-    transform: scale(0.97);
+    transform: scale(0.96);
 }
 
 @media (hover: hover) {
     .site-button:hover {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.5);
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
     }
 }
 
-.tbd { opacity: 0.3; pointer-events: none; }
+.tbd { opacity: 0.2; pointer-events: none; }
