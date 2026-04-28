@@ -1,18 +1,20 @@
 /* Simple Dark Glass Theme */
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-
 body {
     margin: 0;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    /* Forces the page to be at least the full height of the phone screen */
+    min-height: 100vh; 
+    /* Ensures no white space shows when scrolling */
+    background-color: #000000; 
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
     
-    /* Your requested Night Sky wallpaper */
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                url('https://images.unsplash.com/photo-1509773896068-7fd415d91e2e?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=2670&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
+    /* "fixed" can cause issues on some mobile browsers, "scroll" with 100vh is safer */
     background-attachment: fixed;
     color: white;
 }
