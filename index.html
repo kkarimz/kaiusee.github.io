@@ -37,7 +37,6 @@
             }
             presses++;
             if (presses >= 5) {
-                sessionStorage.setItem('auth', '1');
                 document.getElementById('lock-screen').style.display = 'none';
                 document.getElementById('main').style.display = '';
             }
@@ -47,10 +46,6 @@
             if (e.key === 'Enter') unlock();
         });
 
-        if (sessionStorage.getItem('auth') === '1') {
-            document.getElementById('lock-screen').style.display = 'none';
-            document.getElementById('main').style.display = '';
-        }
 
         window.onload = () => {
             const listContainer = document.getElementById('link-list');
