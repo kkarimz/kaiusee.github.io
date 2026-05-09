@@ -5,18 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#000000">
     <title>Kais Links</title>
-    
+
 <link rel="stylesheet" href="style.css?refresh=999">
 </head>
 <body>
 
-    <div class="container">
+    <div id="lock-screen">
+        <div class="lock-box">
+            <input type="password" id="password-input" placeholder="Password" autofocus />
+            <div id="error-msg">Wrong password</div>
+            <button onclick="unlock()">Enter</button>
+        </div>
+    </div>
+
+    <div class="container" id="main" style="display:none">
         <h1>Kais Links</h1>
         <div id="link-list" class="button-container"></div>
     </div>
 
     <script src="links.js"></script>
     <script>
+        let presses = 0;
+
+        function unlock() {
+            const val = document.getElementById('password-input').value;
+            if (val !== '') {
+                presses = 0;
+                document.getElementById('error-msg').style.display = 'block';
+                document.getElementById('password-input').value = '';
+                return;
+            }
+            presses++;
+            if (presses >= 5) {
+                sessionStorage.setItem('auth', '1');
+                document.getElementById('lock-screen').style.display = 'none';
+                document.getElementById('main').style.display = '';
+            }
+        }
+
+        document.getElementById('password-input').addEventListener('keydown', e => {
+            if (e.key === 'Enter') unlock();
+        });
+
+        if (sessionStorage.getItem('auth') === '1') {
+            document.getElementById('lock-screen').style.display = 'none';
+            document.getElementById('main').style.display = '';
+        }
+
         window.onload = () => {
             const listContainer = document.getElementById('link-list');
             if (typeof LINKS !== 'undefined') {
