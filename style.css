@@ -40,8 +40,8 @@ h1 {
 }
 
 .button-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
 
@@ -52,17 +52,23 @@ h1 {
     background: rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    
+
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 20px;
-    
+
     color: #ffffff;
-    padding: 22px;
-    font-size: 1.15rem;
-    font-weight: 300; /* Light weight for a "calm" feel */
+    padding: 16px;
+    height: 90px;
+    font-size: 1rem;
+    font-weight: 300;
     letter-spacing: 1px;
     text-decoration: none;
+    text-align: center;
     transition: all 0.3s ease;
+}
+
+.site-button:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
 }
 
 .site-button:active {
