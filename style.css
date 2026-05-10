@@ -88,31 +88,29 @@ h1 {
 
 #lock-screen {
     position: fixed;
-    inset: 0;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
                 url('https://images.unsplash.com/photo-1436891620584-47fd0e565afb?q=80&w=2574&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
+    z-index: 999;
 }
 
 .lock-box {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     gap: 20px;
-    width: 90vw;
-    max-width: 380px;
-    padding: 0 24px;
-    box-sizing: border-box;
+    width: calc(100% - 48px);
+    max-width: 360px;
 }
 
-.lock-box input,
-.lock-box button {
-    width: 100%;
-    box-sizing: border-box;
+.lock-box input {
     padding: 22px;
     background: rgba(255,255,255,0.07);
     backdrop-filter: blur(15px);
@@ -121,26 +119,38 @@ h1 {
     border-radius: 20px;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 1px;
     text-align: center;
     outline: none;
+    -webkit-appearance: none;
 }
 
 .lock-box input::placeholder { color: rgba(255,255,255,0.4); }
 
 .lock-box button {
+    padding: 22px;
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
     font-weight: 300;
+    letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
+    -webkit-appearance: none;
 }
 
-.lock-box button:hover { background: rgba(255,255,255,0.12); }
 .lock-box button:active { background: rgba(255,255,255,0.2); transform: scale(0.96); }
 
 #error-msg {
     display: none;
     color: rgba(255,100,100,0.9);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     letter-spacing: 1px;
+    text-align: center;
 }
