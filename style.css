@@ -1,7 +1,7 @@
 /* Calm Night Forest Theme */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap');
 
-* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
 
 body {
     margin: 0;
